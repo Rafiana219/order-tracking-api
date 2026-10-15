@@ -1,0 +1,46 @@
+### Variables
+
+@baseUrl = http://localhost:8080
+@customerId = postman-customer
+@idempotencyKey = postman-order-test-002
+@orderId = adb12d90-e964-42ca-b23e-622bb723f9b1
+
+### 1. Health Check
+
+GET {{baseUrl}}/health
+
+### 2. Readiness Check
+
+GET {{baseUrl}}/ready
+
+### 3. Create Order
+
+POST {{baseUrl}}/api/orders/
+Content-Type: application/json
+Idempotency-Key: {{idempotencyKey}}
+
+{
+  "customer_id": "{{customerId}}",
+  "items": [
+    {
+      "product_id": "product-test",
+      "quantity": 1
+    }
+  ]
+}
+
+### 4. List Orders
+
+GET {{baseUrl}}/api/orders/
+
+### 5. Get Order by ID
+
+GET {{baseUrl}}/api/orders/{{orderId}}
+
+### 6. Confirm Payment
+
+POST {{baseUrl}}/api/orders/{{orderId}}/confirm-payment
+
+### 7. Get Order Timeline
+
+GET {{baseUrl}}/api/orders/{{orderId}}/timeline

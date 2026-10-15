@@ -1,0 +1,28 @@
+.env
+.env.*
+!.env.example
+
+*.exe
+*.log
+
+# Go build outputs
+/bin/
+/build/
+*.test
+*.out
+
+# Coverage reports
+coverage.txt
+coverage.html
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.exe~
+
+# Local testing notes
+note.txt
