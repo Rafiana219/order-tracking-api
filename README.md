@@ -67,11 +67,9 @@ Install the following before running the project:
 ### 1. Clone the Repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/Rafiana219/order-tracking-api.git
 cd order-tracking-api
 ```
-
-Replace `<YOUR_GITHUB_REPOSITORY_URL>` with the actual repository URL.
 
 ### 2. Configure Environment Variables
 
@@ -370,7 +368,13 @@ If a Postman Collection is included in the repository, import it into Postman an
 
 ## Live Demo
 
-Live demo URL: **To be added after deployment.**
+Live demo URL: https://legendary-space-meme-5vpv49qpx9w245q7-8080.app.github.dev/
+
+Health Check: https://legendary-space-meme-5vpv49qpx9w245q7-8080.app.github.dev/health
+
+Readiness Check: https://legendary-space-meme-5vpv49qpx9w245q7-8080.app.github.dev/ready
+
+**Note:** This demo is hosted on GitHub Codespaces. The API is accessible while the Codespace is running and the forwarded port is publicly available.
 
 The demo URL should point to a publicly accessible API environment. Do not expose local database credentials, private configuration files, or administrative database access.
 
